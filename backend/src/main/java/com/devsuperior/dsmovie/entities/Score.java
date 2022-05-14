@@ -12,7 +12,7 @@ public class Score {
   private ScorePK id = new ScorePK(); //precisa ser uma classe auxiliar pois é uma chave composta no banco
   private Double value;
 
-  private Score(){
+  public Score(){
 
   }
 
