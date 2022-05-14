@@ -50,6 +50,12 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+   
+    <!-- dependencia para funcionar o live reload -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId> 
+      <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
 	</dependencies>
 
 	<build>

@@ -10,7 +10,6 @@ import javax.persistence.ManyToOne;
 public class ScorePK implements Serializable{
   
   private static final long serialVersionUID = 1L;
-  
   @ManyToOne //configuração de chave estrangeira
   @JoinColumn(name="movie_id") //nome do campo que é a chave estrangeira
   private Movie movie;
