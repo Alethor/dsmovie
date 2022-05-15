@@ -1,0 +1,9 @@
+postgres://
+zaftoeiqdwmnrk nome do usuario
+:
+72050edd5747ec2a87de76beddd3f4764791147ee8548f3cdee204867332fecc senha
+@ec2-107-22-238-112.compute-1.amazonaws.com host do banco de dados
+:
+5432 porta
+/
+dbjrnicbqh247j nome da base de dados
