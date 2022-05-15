@@ -1,4 +1,4 @@
-package com.devsuperior.dsmovie.services;
+﻿package com.devsuperior.dsmovie.services;
 
 import com.devsuperior.dsmovie.dto.MovieDTO;
 import com.devsuperior.dsmovie.entities.Movie;
@@ -16,11 +16,11 @@ public class MovieService {
   @Autowired
   private MovieRepository repository;
 
-  @Transactional(readOnly = true) //determina como um m�todo que trata da JPA e a propriedade readOnly define o m�todo como s� de leitura tornando-o mais eficiente no banco de dados
+  @Transactional(readOnly = true) //determina como um método que trata da JPA e a propriedade readOnly define o m�todo como s� de leitura tornando-o mais eficiente no banco de dados
   public Page<MovieDTO> findAll(Pageable pageable){
    
     Page<Movie> result =  repository.findAll(pageable);
-    Page<MovieDTO> page = result.map(m -> new MovieDTO(m)); //fun��o map do page executa um m�todo pra cada ocorrencia na lista (convertendo movie para movieDTO)
+    Page<MovieDTO> page = result.map(m -> new MovieDTO(m)); //função map do page executa um m�todo pra cada ocorrencia na lista (convertendo movie para movieDTO)
     return page;
   
   }
