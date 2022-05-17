@@ -6,12 +6,12 @@ import javax.persistence.Embeddable;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-@Embeddable //configuração para chava composta
+@Embeddable //configuraÃ§Ã£o para chava composta
 public class ScorePK implements Serializable{
   
   private static final long serialVersionUID = 1L;
-  @ManyToOne //configuração de chave estrangeira
-  @JoinColumn(name="movie_id") //nome do campo que é a chave estrangeira
+  @ManyToOne //configuraÃ§Ã£o de chave estrangeira
+  @JoinColumn(name="movie_id") //nome do campo que ï¿½ a chave estrangeira
   private Movie movie;
 
   @ManyToOne

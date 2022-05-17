@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+
 @RestController
 @RequestMapping(value="/movies")
 public class MovieController {
@@ -19,13 +22,15 @@ public class MovieController {
   private MovieService service;
 
   @GetMapping()
-  public Page<MovieDTO> findAll(Pageable pageable){
+  @Operation(summary = "Lista todos os filmes paginados")
+  public Page<MovieDTO> findAll(@Parameter(hidden = true) Pageable pageable){
 
     return service.findAll(pageable);
 
   }
 
   @GetMapping(value = "/{id}")
+  @Operation(summary = "Lista um filme por id")
   public MovieDTO findById(@PathVariable Long id){
 
     return service.findById(id);
